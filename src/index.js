@@ -1,6 +1,8 @@
 import createHomePage from "./modules/homepage";
 import createMenuPage from "./modules/menu";
 import createAboutPage from "./modules/about";
+import handleSelect from "./modules/handleSelect";
+import "./styles/main.css";
 
 const contentDiv = document.querySelector('.content');
 
@@ -32,6 +34,7 @@ function init() {
             default: return console.log('ERROR');
         }
     })
+    navBtns.addEventListener('click', handleSelect);
 }
 
 document.addEventListener('DOMContentLoaded', init);

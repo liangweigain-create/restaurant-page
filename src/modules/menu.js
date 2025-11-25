@@ -24,9 +24,14 @@ export default function creatMenuPage() {
         dishPrice.classList.add('dish-price');
         dishPrice.textContent = '¥' + data.price;
         //暂时先这么多，菜单描述和图片后续考虑
+        //再试试
+        const dishDesc = document.createElement('p')
+        dishDesc.classList.add('hidden-desc');
+        dishDesc.textContent = data.desc;
 
         dish.appendChild(dishName);
         dish.appendChild(dishPrice);
+        dish.appendChild(dishDesc);
         menuList.appendChild(dish);
     })
 
